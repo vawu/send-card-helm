@@ -4,5 +4,5 @@ metadata:
   name: config-app
 data:
    address: "$address"
-   tudentId: "$studentId"
+   studentId: "$studentId"
    timeTemp: "$timeTemp"
