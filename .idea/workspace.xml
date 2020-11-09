@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54df131d-d2d0-453e-86bd-fe80bcc79604" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send-card-helm/templates/NOTES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/send-card-helm/templates/NOTES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send-card-helm/templates/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/send-card-helm/templates/service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send-card-helm/templates/tests/test-connection.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/send-card-helm/templates/tests/test-connection.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="54df131d-d2d0-453e-86bd-fe80bcc79604" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
