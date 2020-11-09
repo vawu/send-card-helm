@@ -3,5 +3,6 @@ deploy:
  # - envsubst < config.template.yaml > config.yaml
  # - kubectl apply -k .
   - envsubst < demo-dev.properties > demo.properties
-  - kubectl create -f configmap config-app --from-env-file demo.properties
+  - kubectl delete -f configmap config-app
+  - kubectl create  configmap config-app --from-env-file demo.properties
   - helm upgrade --install --set name=send-card send-card send-card-helm/
