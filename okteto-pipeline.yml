@@ -3,5 +3,5 @@ deploy:
  # - envsubst < config.template.yaml > config.yaml
  # - kubectl apply -k .
   - envsubst < configMapDemo.yaml > configMap.yaml
-  - kubectl apply -f configMap.yaml
+  - kubectl apply -f configMap.yaml --validate=false
   - helm upgrade --install --set name=send-card send-card send-card-helm/
