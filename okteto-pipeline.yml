@@ -2,4 +2,5 @@ icon: https://apps.okteto.com/movies/icon.png
 deploy:
   - envsubst < config.template.yaml > config.yaml
   - kubectl apply -k .
-  - helm upgrade --install --set name=send-card send-card send-card-helm/
+  - kubectl create configmap demo-dev-confmap --from-env-file demo-dev.properties
+#  - helm upgrade --install --set name=send-card send-card send-card-helm/
