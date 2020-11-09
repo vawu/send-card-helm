@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: config-app
 data:
-   address: $address
-   tudentId: $studentId
-   timeTemp: $timeTemp
+   address: "$address"
+   tudentId: "$studentId"
+   timeTemp: "$timeTemp"
