@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: container
-        image: vawu/send-card
+        image: vawu/send-card:latest
         volumeMounts:
         - name: config-volume
           mountPath: /etc/config
