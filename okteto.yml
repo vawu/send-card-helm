@@ -1,0 +1,14 @@
+name: send-card
+image: vawu/send-card:latest
+environment:
+- ASPNETCORE_ENVIRONMENT=$MY_ADDRESS
+command: sh
+remote: 22000
+sync:
+- .:/usr/src/app
+forward:
+- 8080:8080
+resources:
+  limits:
+    cpu: "1"
+    memory: 2Gi
