@@ -1,3 +1,5 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:
+  - envsubst < config.template.yaml > config.yaml
+  - kubectl apply -k .
   - helm install send-card-helm/ --generate-name
