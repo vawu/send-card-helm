@@ -1,0 +1,1 @@
+helm upgrade  --namespace demoa --generate-name .
