@@ -29,6 +29,10 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.demoa.repository }}:{{ .Values.image.demoa.tag }}"
           imagePullPolicy: {{ .Values.image.demoa.pullPolicy }}
+          envFrom:
+            - configMapRef:
+                name: config-app-*
+
           ports:
             - name: http
               containerPort: 8080

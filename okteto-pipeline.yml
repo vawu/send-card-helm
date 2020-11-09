@@ -4,4 +4,4 @@ deploy:
   - kubectl apply -k .
 #  - envsubst < demo-dev.properties > demo.properties
 #  - kubectl create configmap demo-dev-confmap --from-env-file demo.properties
-#  - helm upgrade --install --set name=send-card send-card send-card-helm/
+  - helm upgrade --install --set name=send-card send-card send-card-helm/

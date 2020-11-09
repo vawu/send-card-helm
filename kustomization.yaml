@@ -4,6 +4,3 @@ configMapGenerator:
 - name: config-app
   files:
   - config.yaml
-resources:
-- deployment.yaml
-- deployment-card-helm.yaml
