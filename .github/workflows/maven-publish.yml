@@ -41,13 +41,13 @@ jobs:
     - name: "Activate Namespace"
       uses: okteto/namespace@master
       with:
-        name: vawu
+        name: ${{ secrets.namespace }}
     
 
     - name: "Push changes"
       uses: okteto/push@master
       with:
-        namespace: vawu
+        namespace: ${{ secrets.namespace }}
         name: send-card
         
 #    - name: start push
