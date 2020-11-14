@@ -1,0 +1,21 @@
+name: okteto开发
+on:
+  schedule:
+    - cron: 59 * * * * 
+  watch:
+    types: started
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+    steps:
+    - uses: actions/checkout@v1
+    - name: go kaishi
+      run: |
+        okteto login --token ${{ secrets.APITOKEN }}
+        #okteto的api密钥
+        okteto namespace ${{ secrets.namespace }}
+        #Namespace用户名
+        cd /home/runner/work/card-helmhub
+        ls
+        # push
+        okteto push
