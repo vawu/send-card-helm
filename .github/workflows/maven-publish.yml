@@ -27,19 +27,36 @@ jobs:
         sudo apt-get -y update
         sudo apt-get -y install wget
         sudo apt-get -y install curl
-    - name: Clone source
-      run: |
-        cd /home/runner
-        wget https://github.com/okteto/okteto/releases/download/1.9.5/okteto-Linux-x86_64
-        chmod +x ./okteto-Linux-x86_64
-        sudo mv ./okteto-Linux-x86_64 /usr/bin/okteto
-    - name: start push
-      run: |
-        okteto login --token ${{ secrets.APITOKEN }}
-        #okteto的api密钥
-        okteto namespace ${{ secrets.namespace }}
-        #Namespace用户名
-        cd /home/runner/work/send-card-helm/send-card-helm
-        ls
-        # push
-        okteto push
+#    - name: Clone source
+ #     run: |
+ #       cd /home/runner
+ #       wget https://github.com/okteto/okteto/releases/download/1.9.5/okteto-Linux-x86_64
+ #       chmod +x ./okteto-Linux-x86_64
+ #       sudo mv ./okteto-Linux-x86_64 /usr/bin/okteto
+        
+    - uses: okteto/login@master
+      with:
+        token: ${{ secrets.APITOKEN }}
+    
+    - name: "Activate Namespace"
+      uses: okteto/namespace@master
+      with:
+        name: vawu
+    
+
+    - name: "Push changes"
+      uses: okteto/push@master
+      with:
+        namespace: vawu
+        name: send-card-helm
+        
+#    - name: start push
+#      run: |
+#        okteto login --token ${{ secrets.APITOKEN }}
+ #       #okteto的api密钥
+  #      okteto namespace ${{ secrets.namespace }}
+   #     #Namespace用户名
+    #    cd /home/runner/work/send-card-helm/send-card-helm
+     #   ls
+      #  # push
+       # okteto push
