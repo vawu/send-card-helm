@@ -1,4 +1,4 @@
-name: send-card
+name: send-card-helm
 image: openjdk:8u181-jdk-alpine
 command: sh
 remote: 22000
