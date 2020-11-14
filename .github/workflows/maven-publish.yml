@@ -48,7 +48,7 @@ jobs:
       uses: okteto/push@master
       with:
         namespace: vawu
-        name: send-card-helm
+        name: send-card
         
 #    - name: start push
 #      run: |
