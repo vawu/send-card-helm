@@ -2,7 +2,7 @@ name: okteto开发
 on:
   push:
   schedule:
-    - cron: '* * * * *'
+    - cron: '0 23 * * *'
 #  watch:
 #    types: started
 jobs:
