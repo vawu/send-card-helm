@@ -2,15 +2,15 @@ name: okteto开发
 on:
   push:
   schedule:
-    - cron: '0 23 * * *'
-  watch:
-    types: started
+    - cron: '* * * * *'
+#  watch:
+#    types: started
 jobs:
   build:
     runs-on: ubuntu-latest  
     steps:
     - uses: actions/checkout@v1
-    - name: start push
+    - name: git submodule clone from remote hub
       run: |
         git submodule update --init --recursive
         cd /home/runner/work/send-card-helm/send-card-helm/send-card
