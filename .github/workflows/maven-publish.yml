@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: git submodule clone from remote hub
       run: |
-        git submodule update --init --recursive
+        git clone https://github.com/vawu/send-card
         cd /home/runner/work/send-card-helm/send-card-helm/send-card
         git checkout master
         ls
